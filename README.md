@@ -1,5 +1,7 @@
 # NFS2SE Setup — Need for Speed II SE on Windows 10/11
 
+MADE WITH AI - Claude - Just for Fun
+
 **This fork** of [zaps166/NFSIISE](https://github.com/zaps166/NFSIISE) hosts **NFS2SE Setup**, an installer for Need for Speed II: Special Edition with four versions of the game, a launcher with menus for every option, cockpit view with GPU 3D and an optional Brazilian Portuguese translation.
 
 **➡ Download: [Releases](https://github.com/lndnfsu2-pixel/NFSIISE/releases/latest)** (`NFS2SE Setup.exe`)
