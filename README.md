@@ -8,6 +8,21 @@
 
 **No game files are included.** You need your own original CD (or an .iso image of it).
 
+## Screenshots
+
+### NFS2SE Launcher
+
+| | |
+|---|---|
+| ![Launcher - version](docs/images/launcher-version.png) | ![Launcher - video](docs/images/launcher-video.png) |
+| ![Launcher - cockpit](docs/images/launcher-cockpit.png) | ![Launcher - cheats](docs/images/launcher-cheats.png) |
+
+### Brazilian Portuguese translation / Tradução para português do Brasil
+
+| | | |
+|---|---|---|
+| ![Main menu in Portuguese](docs/images/ptbr-main-menu.png) | ![Game setup in Portuguese](docs/images/ptbr-game-setup.png) | ![Race results in Portuguese](docs/images/ptbr-race-results.png) |
+
 ## What you need
 1. **Your own original Need for Speed II: Special Edition CD**: the CD drive, an `.iso` image (the installer mounts it by itself) or a folder with the CD files.
 2. **zaps166's two release zips.** The installer links to them and has a button that downloads both:
@@ -104,7 +119,9 @@ The installed game folder also has `LICENSE.txt` (MIT, Copyright (c) 2014-2024 B
 
 ---
 
-# Original NFSIISE README (by zaps166)
+<details>
+<summary><b>Original NFSIISE README (by zaps166) — click to show / clique para mostrar</b></summary>
+
 
 
 ![Screenshot](https://raw.githubusercontent.com/zaps166/GitHubCommonContents/master/Screenshots/NFSIISE.png)
@@ -261,3 +278,5 @@ sudo apt install gcc-multilib
 * OpenGL 1.x only: if the game crashes it might not restore the gamma properly. In this case run: `xgamma -gamma 1.0`.
 * There is Docker based build environment available on [GitHub](https://github.com/thomas-mc-work/nfsiise-build-env).
 * LICENSE is only for wrapper source code.
+
+</details>
