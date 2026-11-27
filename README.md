@@ -1,5 +1,111 @@
-NFSIISE
-=======
+# NFS2SE Setup — Need for Speed II SE on Windows 10/11
+
+**This fork** of [zaps166/NFSIISE](https://github.com/zaps166/NFSIISE) hosts **NFS2SE Setup**, an installer for Need for Speed II: Special Edition with four versions of the game, a launcher with menus for every option, cockpit view with GPU 3D and an optional Brazilian Portuguese translation.
+
+**➡ Download: [Releases](https://github.com/lndnfsu2-pixel/NFSIISE/releases/latest)** (`NFS2SE Setup.exe`)
+
+> 🇧🇷 **Português:** instalador do Need for Speed II SE para Windows 10/11 com 4 versões do jogo, um launcher com menus para todas as opções, visão de cockpit com 3D pela placa de vídeo e tradução opcional para português do Brasil. **Nenhum arquivo do jogo vem incluído**: você precisa do seu CD original (ou de uma imagem .iso dele). Baixe o `NFS2SE Setup.exe` em [Releases](https://github.com/lndnfsu2-pixel/NFSIISE/releases/latest).
+
+**No game files are included.** You need your own original CD (or an .iso image of it).
+
+## What you need
+1. **Your own original Need for Speed II: Special Edition CD**: the CD drive, an `.iso` image (the installer mounts it by itself) or a folder with the CD files.
+2. **zaps166's two release zips.** The installer links to them and has a button that downloads both:
+   - NFSIISE: `nfs2se-win32-v1.4.0.zip` — https://github.com/zaps166/NFSIISE/releases/tag/v1.4.0
+   - NFSIISEN: `Need.For.Speed.II.SE.zip` — https://github.com/zaps166/NFSIISEN/releases/tag/rel-03
+
+## How to install
+1. Download **`NFS2SE Setup.exe`** from [Releases](https://github.com/lndnfsu2-pixel/NFSIISE/releases/latest).
+2. Run it, then point it to your CD/ISO and to the two zips (if the zips are next to the installer or in Downloads, it finds them automatically).
+3. Pick the install folder, and choose Brazilian Portuguese if you want it.
+4. Start the game with **NFS2SE Launcher** (desktop / Start menu shortcut).
+
+The installer copies the game data from your CD, builds the patched executables from your own original files (it only stores the changed bytes) and checks every file with MD5 at the end. It also creates `Desinstalar.cmd` (uninstall) and an entry in Windows "Installed apps".
+
+## The four versions
+| Launcher button | Executable | Notes |
+|---|---|---|
+| Software (DirectDraw) | `NFS2SEN.EXE` | original software renderer, 4:3 |
+| Software + OpenGL | `NFS2SEN-GL.EXE` | software version with the 3D drawn by OpenGL (GPU): cockpit view and split screen |
+| 3dfx Glide (dgVoodoo) | `NFS2SEA.EXE` | original 3dfx version via dgVoodoo 2 + *glidedash*: in-car dashboard with steering wheel and needles |
+| 3dfx Glide + OpenGL | `nfs2se.exe` | zaps166's NFSIISE port, cockpit build |
+
+## NFS2SE Launcher
+- Choose which of the four versions to play.
+- Edit all options through menus instead of `.txt`/`.conf` files: **video** (aspect ratio, full screen/window, window size, VSync, texture filtering, anti-aliasing), **cockpit** (dashboard on/off, road height), **details**, **sound**, **controls**, **advanced**, **network** (ports, broadcast, IPX over UDP).
+- **Cheats** menu: each cheat on/off (unlocks, per-race effects and special car), works in all four versions.
+- 7 languages: Portuguese, English, French, German, Italian, Spanish and Swedish (the same menu also sets the game language).
+- Only the changed lines are rewritten in the config files (comments are kept).
+
+## Changes compared to the original game / zaps166 releases
+- In-car (cockpit) view with GPU 3D in the software version (`NFS2SEN-GL.EXE`) and in the 3dfx version (`NFS2SEA.EXE`, glidedash).
+- 4:3 by default in all versions (no stretched cars); other aspect ratios can be chosen in the launcher.
+- Brightness key in the software versions (F10 / Shift+F10).
+- Cheats file (`cheats.txt`) read by all four versions.
+- Optional **Brazilian Portuguese** translation (menus, in-race texts, pause menu, results screen and HUD). It takes the Swedish language slot; choosing "Svenska" in the launcher restores the original Swedish.
+- Optional Windows compatibility shims (`NFS2SEN.SDB` / `NFS2SEA.SDB`, needs administrator).
+
+## Function keys in-game
+
+### Glide version (nfs2se.exe)
+* F1 - toggle rain
+* F2 - car detail
+* F3 - view distance
+* F4 - toggle horizon
+* F5 - toggle HUD (player 1)
+* F6 - toggle HUD (player 2)
+* F7 - toggle mirror
+* F8 - toggle music
+* F9 - toggle sound effects
+* F10 - brightness
+* F11 - reset car (player 1)
+* F12 - reset car (player 2)
+
+### Software versions (NFS2SEN.EXE and NFS2SEN-GL.EXE)
+* F1 - 3D view size (full / medium / small, not in split screen)
+* F2 - 3D render resolution (lower resolution steps)
+* F3 - view distance
+* F4 - toggle horizon
+* F5 - toggle HUD (player 1)
+* F6 - toggle HUD (player 2)
+* F7 - toggle mirror (cockpit view only, on dashboards that have a mirror)
+* F8 - toggle music
+* F9 - toggle sound effects
+* F10 - brightness (Shift+F10 - darker; added by this project, the original software version has no brightness key)
+* F11 - reset car (player 1)
+* F12 - reset car (player 2)
+
+The software version has no rain (F1 and F2 do different things there).
+
+## Credits and Acknowledgments
+
+This project is a fork of NFSIISE by zaps166 (Błażej Szczygieł):
+https://github.com/zaps166/NFSIISE
+It also includes a modified version of NFSIISEN by zaps166:
+https://github.com/zaps166/NFSIISEN
+
+Includes code from nfs-recompiled by motor-dev:
+https://github.com/motor-dev/nfs-recompiled
+
+Special thanks to zaps166 and motor-dev for their contributions to the preservation and development of Need for Speed II: Special Edition.
+
+NFSIISE is distributed under the MIT License (see LICENSE). This is an independent project and is not officially affiliated with or endorsed by the original authors or by Electronic Arts. "Need for Speed" is a trademark of Electronic Arts. No game files are included; you need your own original copy of Need for Speed II: Special Edition.
+
+Launcher, installer, DDNGL.dll, ddnfs.dll (4:3), glidedash (Glide2x.dll), wsockipx (WSOCK32.dll) and cheats: Copyright (C) 2026 lndnfsu2-pixel.
+
+**Third-party components included in the installer**
+- [dgVoodoo 2](http://dege.fw.hu/) by Dege ([GitHub](https://github.com/dege-diosg/dgVoodoo2)) — freeware, shipped unmodified as allowed by its [readme](http://dege.freeweb.hu/dgVoodoo2/ReadmeGeneral/); all rights belong to its author.
+- [SDL2](https://www.libsdl.org/) by Sam Lantinga and contributors — zlib license.
+- The xBR texture upscale option of `nfs2se.exe` is an own implementation of the xBR algorithm by Hyllian.
+
+**Trademarks:** "Need for Speed" and the logo shown in the launcher belong to Electronic Arts and are used only to identify the game. 3dfx and Glide are trademarks of their respective owners; no 3dfx code is included.
+
+The installed game folder also has `LICENSE.txt` (MIT, Copyright (c) 2014-2024 Błażej Szczygieł) and `CREDITS.txt`.
+
+---
+
+# Original NFSIISE README (by zaps166)
+
 
 ![Screenshot](https://raw.githubusercontent.com/zaps166/GitHubCommonContents/master/Screenshots/NFSIISE.png)
 
