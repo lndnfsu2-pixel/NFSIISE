@@ -1,5 +1,7 @@
 # NFS2SE Setup — Need for Speed II SE on Windows 10/11
 
+<a href="https://recomplauncher.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://recomplauncher.com/assets/press/launcher/badge-light.svg"><img alt="Get it on RecompLauncher" src="https://recomplauncher.com/assets/press/launcher/badge-dark.svg" height="48"></picture></a>
+
 MADE WITH AI - Claude - Just for Fun
 
 **This fork** of [zaps166/NFSIISE](https://github.com/zaps166/NFSIISE) hosts **NFS2SE Setup**, an installer for Need for Speed II: Special Edition with four versions of the game, a launcher with menus for every option, cockpit view with GPU 3D and an optional Brazilian Portuguese translation.
@@ -32,6 +34,10 @@ MADE WITH AI - Claude - Just for Fun
    - NFSIISEN: `Need.For.Speed.II.SE.zip` — https://github.com/zaps166/NFSIISEN/releases/tag/rel-03
 
 ## How to install
+
+**With [RecompLauncher](https://recomplauncher.com):** install the release, pick your CD image (.iso) or CD folder on the setup screen, keep the "Download zaps166's releases" tick on, and press Set Up, then Play (it opens NFS2SE Launcher).
+
+**By hand:**
 1. Download **`NFS2SE Setup.exe`** from [Releases](https://github.com/lndnfsu2-pixel/NFSIISE/releases/latest).
 2. Run it, then point it to your CD/ISO and to the two zips (if the zips are next to the installer or in Downloads, it finds them automatically).
 3. Pick the install folder, and choose Brazilian Portuguese if you want it.
